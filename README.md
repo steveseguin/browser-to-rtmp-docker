@@ -12,7 +12,7 @@ The input for the container is a file called `container.env`. You create this fi
  
  
 * `MEETING_URL`: Browser URL (without any spaces in it)
-  * Example(If you want to record VDO.Ninja): `https://vdo.ninja/?room=ROOMID&scene`
+  * Example(If you want to record a VDO.Ninja room): `https://vdo.ninja/?room=ROOMID&scene`
  
 * `RTMP_URL`: the URL of the RTMP endpoint,
   * Twitch example: `rtmp://live.twitch.tv/app/<stream key>`
