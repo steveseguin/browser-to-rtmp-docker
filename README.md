@@ -1,6 +1,6 @@
-# Amazon Chime Meeting Broadcast Demo
+# Webpage -> RTMP  Demo
 
-This repository contains a Docker container that, when started, will join an Amazon Chime meeting by PIN and broadcast the meeting's audio and video in high definition (1080p at 30fps) to an RTMP endpoint you specify. The broadcast participant joins the meeting in the muted state. The meeting PIN must be unlocked in order for the broadcast participant to join the meeting.
+This repository contains a Docker container that, when started, will join a selected website and broadcast the meeting's audio and video in high definition (1080p at 30fps) to an RTMP endpoint you specify.
 
 ## Prerequisites
 
@@ -11,9 +11,9 @@ You will need Docker and `make` installed on your system. As this container is r
 The input for the container is a file called `container.env`. You create this file by copying the `container.env.template` to `container.env` and filling in the following variables:
  
  
-* `MEETING_URL`: Chime Meeting URL (without any spaces in it)
-  * Example(If you want to record Chime): `https://app.chime.aws/portal/<your Meeting ID here>`
-  * Example(Hosted [Chime SDK Serverless Demo](https://github.com/aws/amazon-chime-sdk-js/tree/master/demos/serverless) URL): `<Hosted Chime URL>/?m=<Meeting ID>&broadcast=true`
+* `MEETING_URL`: Browser URL (without any spaces in it)
+  * Example(If you want to record VDO.Ninja): `https://vdo.ninja/?room=ROOMID&scene`
+ 
 * `RTMP_URL`: the URL of the RTMP endpoint,
   * Twitch example: `rtmp://live.twitch.tv/app/<stream key>`
   * YouTube Live example: `rtmp://a.rtmp.youtube.com/live2/<stream key>`
@@ -32,7 +32,7 @@ Once you have configured the `container.env` file, run the container:
 $ make run
 ```
  
-The container will start up and join the given Amazon Chime meeting as the `<Broadcast>` attendee and start streaming H.264/AAC in FLV format to the given RTMP endpoint.
+The container will start up and load the given website and then start streaming H.264/AAC in FLV format to the given RTMP endpoint.
 
 When your broadcast has finished, stop the stream by killing the container:
 
