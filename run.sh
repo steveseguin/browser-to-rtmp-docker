@@ -5,7 +5,7 @@ SCREEN_HEIGHT=1080
 SCREEN_RESOLUTION=${SCREEN_WIDTH}x${SCREEN_HEIGHT}
 COLOR_DEPTH=24
 X_SERVER_NUM=2
-VIDEO_BITRATE=3000
+VIDEO_BITRATE=10000
 VIDEO_FRAMERATE=30
 VIDEO_GOP=$((VIDEO_FRAMERATE * 2))
 AUDIO_BITRATE=160k
@@ -86,12 +86,12 @@ ffmpeg \
   -c:v libx264 \
     -pix_fmt yuv420p \
     -profile:v main \
-    -preset veryfast \
+    -preset slow \
     -x264opts "nal-hrd=cbr:no-scenecut" \
     -minrate ${VIDEO_BITRATE} \
     -maxrate ${VIDEO_BITRATE} \
     -g ${VIDEO_GOP} \
-  -filter_complex "adelay=delays=1000|1000" \
+  -filter_complex "aresample=async=1000:min_hard_comp=0.100000:first_pts=0,adelay=delays=562|562" \
   -c:a aac \
     -b:a ${AUDIO_BITRATE} \
     -ac ${AUDIO_CHANNELS} \
