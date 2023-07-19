@@ -19,7 +19,7 @@ The input for the container is a file called `container.env`. You create this fi
   * Twitch example: `rtmp://live.twitch.tv/app/<stream key>`
   * YouTube Live example: `rtmp://a.rtmp.youtube.com/live2/<stream key>`
  
-  * You may wish to also change the ffmpeg sync value from 562 to 2562, or some other value as needed, to dial in the audio/video sync. This may vary based on your system and configuration. 
+* You may wish to also change the ffmpeg sync value from 562 to 2562, or some other value as needed, to dial in the audio/video sync. This may vary based on your system and configuration. 
 
 ## Running
 
