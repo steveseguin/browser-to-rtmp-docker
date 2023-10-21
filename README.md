@@ -31,7 +31,15 @@ You'll need Docker, but the rest should be pretty much handled by that.
 
 If the following doesn't work for you, search online for how to install that.
 ```
+sudo apt-get update
+sudo apt-get install docker-io -y
+```
+
+or if that complains, you can try:
+```
 snap install docker
+# add `"storage-driver": "vfs"` to /var/snap/docker/current/config/daemon.json  ## EC2 / Vultr / Cloud servers might need this added
+sudo snap restart docker
 ```
 I've tested this on ARM64 Ubuntu; I've yet to test on AMD64 though.
 
