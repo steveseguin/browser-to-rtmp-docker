@@ -29,19 +29,21 @@ The input for the container is a file called `container.env`. You create this fi
 
 You'll need Docker, but the rest should be pretty much handled by that. 
 
-If the following doesn't work for you, search online for how to install that.
+Installing docker the classic way:
 ```
 sudo apt-get update
 sudo apt-get install docker-io -y
 ```
 
-or if that complains, you can try:
+or if that complains about buildx issues, you can try:
 ```
 snap install docker
 # add `"storage-driver": "vfs"` to /var/snap/docker/current/config/daemon.json  ## EC2 / Vultr / Cloud servers might need this added
 sudo snap restart docker
 ```
-I've tested this on ARM64 Ubuntu; I've yet to test on AMD64 though.
+As noted, you may need to add somethign to a config file to get Docker working with some cloud services.
+
+I've tested this on ARM64 Ubuntu 22 and Ubuntu 18 AMD64. 
 
 ## Running
 
@@ -66,6 +68,8 @@ $ docker kill bcast
 ```
 
 If you launched an EC2 instance to host the Docker container, you may also want to stop the instance to avoid incurring cost.
+
+If the stream doesn't publish properly, you can try again, or reduce the CPU load in some way by perhaps loading a simple browser page first, start the stream, and then introduce CPU-intensive elements to the browser source.
 
 ## Support
 
