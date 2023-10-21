@@ -6,7 +6,7 @@ Chromium (or Chrome), along with FFmpeg is used to achieve this, and it is suppo
 
 ## Prerequisites
 
-You will need Docker and `make` installed on your system. As this container is running a Chromium (or Chrome) browser instance and transcoding audio and video in real time, it is recommended to use a host system with at least 4GB RAM and 8 CPU cores, such as an c5.2xlarge EC2 instance running Ubuntu Linux 18.04 LTS (or newer).
+You will need Docker and `make` installed on your system. As this container is running a Chromium (or Chrome) browser instance and transcoding audio and video in real time, it is recommended to use a host system with at least 4GB RAM and 8 vCPU cores, such as an c5.2xlarge EC2 instance running Ubuntu Linux 18.04 LTS (or newer).
 
 While it might be possible to get away with just a 4-vCPU server for encoding and broadcasting a simple website without audio or video-decoding, it's not recommended if trying to transcode a video mix at 1080p. Common problems if the CPU is not sufficient include audio and video not staying in sync, low frame rates, and other issues with stability.
 
