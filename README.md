@@ -73,5 +73,5 @@ If the stream doesn't publish properly, you can try again, or reduce the CPU loa
 
 ## Support
 
-I offer limited technical support on Discord at https://discord.vdo.ninja.  You can just make a support ticket in the #vdo-ninja-supprot channel there, and I'll help as I can.
+I offer limited technical support on Discord at https://discord.vdo.ninja.  You can just make a support ticket in the #vdo-ninja-supprot channel there, and I'll help as I can. Or I guess create a ticket here, and hopefully I see.
 
