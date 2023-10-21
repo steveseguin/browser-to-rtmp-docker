@@ -35,7 +35,7 @@ sudo apt-get update
 sudo apt-get install docker-io -y
 ```
 
-or if that complains about buildx issues, you can try:
+or if that complains about buildx issues, remove it and instead you can try:
 ```
 snap install docker
 # add `"storage-driver": "vfs"` to /var/snap/docker/current/config/daemon.json  ## EC2 / Vultr / Cloud servers might need this added
