@@ -1,10 +1,12 @@
-FROM ubuntu:20.04
+FROM ubuntu:18.04
+ENV DEBIAN_FRONTEND=noninteractive
 
-ENV DEBIAN_FRONTEND noninteractive
-
-RUN /usr/bin/apt-get update
-RUN /usr/bin/apt-get upgrade -y
-RUN /usr/bin/apt-get install -y pulseaudio xvfb firefox ffmpeg xdotool curl unzip
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get install -y pulseaudio xvfb curl unzip xdotool apt-utils
+RUN apt-get install -y ffmpeg
+RUN apt-get install -y chromium-browser
+RUN apt-get --fix-broken install -y
 
 COPY run.sh /
 RUN chmod +x /run.sh
