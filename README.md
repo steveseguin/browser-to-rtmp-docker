@@ -27,9 +27,13 @@ The input for the container is a file called `container.env`. You create this fi
 
 ## Depedencies
 
-I've tested this on ARM64 Ubuntu; I've yet to test on AMD64 though.
+You'll need Docker, but the rest should be pretty much handled by that. 
 
-You'll need Docker, but the rest should be pretty much handled by that. Search online for how to install that.
+If the following doesn't work for you, search online for how to install that.
+```
+snap install docker
+```
+I've tested this on ARM64 Ubuntu; I've yet to test on AMD64 though.
 
 ## Running
 
