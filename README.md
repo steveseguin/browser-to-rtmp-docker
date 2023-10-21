@@ -25,6 +25,12 @@ The input for the container is a file called `container.env`. You create this fi
  
 * You may wish to also change the ffmpeg sync value from 562 to 2562, or some other value as needed, to dial in the audio/video sync. This may vary based on your system and configuration. 
 
+## Depedencies
+
+I've tested this on ARM64 Ubuntu; I've yet to test on AMD64 though.
+
+You'll need Docker, but the rest should be pretty much handled by that. Search online for how to install that.
+
 ## Running
 
 To build the Docker image, run:
