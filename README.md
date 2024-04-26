@@ -34,8 +34,9 @@ Installing docker the classic way:
 sudo apt-get update
 sudo apt-get install docker-io -y
 ```
+or if using Debian 12 Bookworm, see https://linuxiac.com/how-to-install-docker-on-debian-12-bookworm/
 
-or if that complains about buildx issues, remove it and instead you can try:
+If running a remote VM though, and it complains about buildx issues, remove it and instead try:
 ```
 snap install docker
 # add `"storage-driver": "vfs"` to /var/snap/docker/current/config/daemon.json  ## EC2 / Vultr / Cloud servers might need this added
